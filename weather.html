@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CloudWatch </title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
+    <style>
+        .card-title{
+            font-family: 'Raleway', sans-serif; 
+            position: absolute; 
+            top: 350px; 
+            left: 50px; 
+            font-size: 100px;
+
+        }
+        
+    </style>
+
+</head>
+<body style="background-image: linear-gradient(white,rgb(0,191,255));padding: 60px;">
+    <div class="shadow-lg p-0 mb-5 bg-body rounded">
+        <div class="card bg-white text-white">
+        
+            <div class="row">
+                <div class="col-sm-8">
+                    <img src="icons/logo.jpg" class="card-img" id="image" alt="..." width="1125" height="513">
+                    <img src="icons/sun.png" id="icon" width="50" height="50" style="position: absolute; top: 360px; left: 222px; display: none;">
+                    <div class="card-img-overlay" >
+                       <h5 class="card-title"><span id="curr_temp"></span></h5>
+                       <h5 class="card-text" style="font-family: 'Raleway',sans-serif; font-weight: 100; position: absolute; top: 30px; left: 50px; font-size: 80px;"><span id="location"> </span></h5>
+                       <h5 class="card-text" style= "font-weight: 50; position: absolute; top: 350px;left: 500px; font-size: 80px;"><span id="time"> </span></h5>
+                       <h5 class="card-text" style="position: absolute; top: 405px; left: 200px; font-size: 40px;font-weight:50;"><span id="description"> </span></h5>
+                       <p class="card-text"  style= "font-weight: 50; position: absolute; top: 435px;left: 520px; font-size: 20px;"><span id="date"></span> </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-4" style="background-image: linear-gradient(#2193b0,#6dd5ed);"><br>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="search_input" placeholder="name@example.com">
+                        <label for="floatingInput" style="color: black;">Search your City</label> <br>
+                        <div class="col-md-12 text-center">
+                            <button type="button" class="btn btn-outline-primary" id="search_button">Search</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <p style="font-family: 'Raleway',sans-serif; font-weight: bold;">Weather details</p> 
+                        <p style="font-family: 'Raleway',sans-serif;"> Max Temperature </p>
+                        <p style="font-family: 'Raleway',sans-serif; position: absolute; left: 1050px; top: 215px;"><span id="max-temp"></span>&#176C</p>
+                        <p style="font-family: 'Raleway',sans-serif;"> Min Temperature </p>
+                        <p style="font-family: 'Raleway',sans-serif; position: absolute; left: 1050px; top: 255px;"><span id="min-temp"> </span>&#176C</p>
+                        <p style="font-family: 'Raleway',sans-serif;"> Humidity </p>
+                        <p style="font-family: 'Raleway',sans-serif; position: absolute; left: 1050px; top: 295px;"><span id="humidity"> </span>%</p>
+                        <p style="font-family: 'Raleway',sans-serif;"> Wind Speed </p>
+                        <p style="font-family: 'Raleway',sans-serif; position: absolute; left: 1010px; top: 335px;"><span  id="wind-speed"> </span> km/hr</p>
+                    </div>
+                    <hr>
+                    <p style="font-family: 'Raleway',sans-serif; font-weight: bold;">Location</p>
+                    <p style="font-family: 'Raleway',sans-serif;"> Latitude </p>
+                    <p style="font-family: 'Raleway',sans-serif; position: absolute; left: 1027px; top: 430px;"><span  id="latitude"> </span> </p>
+                    <p style="font-family: 'Raleway',sans-serif;"> Longitude </p>
+                    <p style="font-family: 'Raleway',sans-serif; position: absolute; left: 1027px; top: 470px;"><span  id="longitude"> </span> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="weather.js"></script>
+
+</body>
+</html>
