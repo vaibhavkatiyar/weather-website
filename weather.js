@@ -26,7 +26,7 @@ window.addEventListener("load",function(){
         navigator.geolocation.getCurrentPosition(async (position)=>{
         long = position.coords.longitude;
         lat = position.coords.latitude;
-        const response = await fetch("https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+long+"&appid=e48aad263d1e41dc8ce10cefc49a1f73");
+        const response = await fetch("https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+long+"&appid=<API KEY>");
         const weatherData = await response.json();
         //prints json format of API in console.
         const city_name = weatherData.name;
@@ -46,7 +46,7 @@ search_button.addEventListener('click', (e)=>{
 const getWeather=async (city) =>
 {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}
-                            &appid=e48aad263d1e41dc8ce10cefc49a1f73`, {mode:'cors'});
+                            &appid=<API KEY>`, {mode:'cors'});
 
         const weatherData = await response.json();
           //prints json format of API in console.
